@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flor em CSS</title>
+<style>
+  /* Container para centralizar a flor */
+  .flor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  /* Título */
+  .titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  /* Vaso */
+  .vaso {
+    width: 40px;
+    height: 60px;
+    background-color: #b5651d;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    margin-top: 10px;
+  }
+
+  /* Flor */
+  .haste {
+    width: 10px;
+    height: 70px;
+    background-color: #6b8e23;
+    margin-top: -10px;
+  }
+
+  .folha {
+    width: 20px;
+    height: 20px;
+    background-color: #6b8e23;
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  }
+
+  .folha-esquerda {
+    transform: rotate(-35deg);
+    margin-left: -20px;
+  }
+
+  .folha-direita {
+    transform: rotate(35deg);
+    margin-left: 10px;
+  }
+
+  /* Pétalas */
+  .petala {
+    width: 50px;
+    height: 50px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .petala1 { top: -30px; left: -30px; }
+  .petala2 { top: -30px; right: -30px; }
+  .petala3 { bottom: -30px; left: -30px; }
+  .petala4 { bottom: -30px; right: -30px; }
+
+  /* Centro da flor */
+  .centro {
+    width: 40px;
+    height: 40px;
+    background-color: #ffd700;
+    position: relative;
+    clip-path: circle(50%);
+  }
+</style>
+</head>
+<body>
+
+<div class="flor-container">
+  <div class="titulo">Flor</div>
+
+  <!-- Desenho da Flor -->
+  <div class="petala petala1"></div>
+  <div class="petala petala2"></div>
+  <div class="petala petala3"></div>
+  <div class="petala petala4"></div>
+  <div class="centro"></div>
+
+  <div class="haste">
+    <div class="folha folha-esquerda"></div>
+    <div class="folha folha-direita"></div>
+  </div>
+
+  <div class="vaso"></div>
+</div>
+
+</body>
+</html>
